@@ -1,0 +1,906 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+
+* {
+  padding: 1px;
+  border: 0;
+  font-family: "Poppins", sans-serif;
+
+  background-color: #efe9e6;
+  box-sizing: border-box;
+}
+
+label,
+input,
+textarea {
+  padding: -1em;
+  margin: 1em;
+}
+
+button {
+  border: 1px solid;
+  border-radius: 5px;
+  width: 10em;
+  padding: 5px;
+}
+
+/* content */
+.color,
+h1,
+.content-section,
+#menuToggle a,
+h3,
+.skills-wrapper,
+p {
+  color: #8f7d5e;
+}
+
+h3 {
+  padding-top: 80px;
+  text-align: center;
+}
+
+/* SKILL BAR */
+/* Container for skill bars */
+.container {
+  width: 100%; /* Full width */
+  background-color: #FFFFFF; /* Grey background */
+}
+
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 1px; /* Add top padding */
+  padding-bottom: 1px; /* Add bottom padding */
+  color: white; /* White text color */
+}
+
+.technical {
+  width: 90%;
+  background-color: #04aa6d;
+} /* Green */
+.html {
+  width: 80%;
+  background-color: #04aa6d;
+} /* Green */
+.css {
+  width: 50%;
+  background-color: #2196f3;
+} /* Blue */
+.js {
+  width: 10%;
+  background-color: #f44336;
+} /* Red */
+.php {
+  width: 40%;
+  background-color: #f44336;
+} /* Dark Grey */
+.c-plus-plus {
+  width: 20%;
+  background-color: #f44336;
+} /* Dark Grey */
+.skills-wrapper {
+  font-weight: bolder;
+}
+/* PROJECTS */
+.projects img {
+  width: 100%;
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+/********************this is for the mobile app 1st with a width of 375p******************************************/
+
+@media screen and (max-width: 375px) {
+  /* Branding */
+  .logo {
+    display: block;
+    position: relative;
+    top: 50px;
+    width: 15em;
+    border-radius: 50%;
+  }
+  .logo-container,
+  h1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .content-flex,
+  .content-section,
+  h3,
+  .img-wrapper,
+  .about-wrapper,
+  .icons,
+  .projects,
+  .logo {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+  }
+  .content-section {
+    padding: 5px 15px 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* About section */
+
+  .about-img {
+    border: 1px solid;
+    border-radius: 50%;
+    width: 90%;
+    background-image: linear-gradient(#695c45, #f5d6a2);
+  }
+  .icons img {
+    width: 15%;
+    margin-top: 10px;
+    padding: 10px;
+  }
+
+  .about-wrapper p {
+    background-color: #615540;
+    color: #efe9e6;
+    padding: 15px;
+    border-radius: 5px;
+  }
+
+  /* burger navbar */
+  #menuToggle {
+    display: block;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    right: 0;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle a {
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  #menuToggle a:hover {
+    color: tomato;
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+  }
+
+  /*
+ * Just a quick hamburger
+ */
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #9e8a68;
+    border-radius: 5px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  /* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #9e8a68;
+  }
+
+  /*
+ * But let's hide the middle one.
+ */
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  /*
+ * Ohyeah and the last one should go the other direction
+ */
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  /*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+  #menu {
+    position: flex;
+    margin: -70px 0 0 -50px;
+    padding: 40px 0px 0px 75px;
+    border-radius: 20px;
+
+    /* background: #ededed; */
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  #menu li {
+    padding: 5px;
+    font-size: 14px;
+    display: inline;
+    font-weight: bold;
+  }
+
+  /*
+ * And let's slide it in from the left
+ */
+  #menuToggle input:checked ~ ul {
+    transform: none;
+  }
+
+  /* MARKTECH SLIDESHOW */
+
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 30em;
+    position: relative;
+    margin: auto;
+    padding-bottom: 10px;
+  }
+
+  /* The dots/bullets/indicators */
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active {
+    background-color: #717171;
+  }
+
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @-webkit-keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* CONTACT ME */
+  input,
+  select,
+  textarea,
+  form {
+    text-align: center;
+    background-color: #efe9e6;
+    border-radius: 5px;
+    width: 21.5em;
+    border: 1px solid;
+    padding: 0.5em;
+  }
+}
+/**************************************************TABLET RESOLUTION ****************************************/
+@media screen and (min-width: 376px) and (max-width: 768px) {
+  /* burger navbar */
+  #menuToggle {
+    display: block;
+    position: relative;
+    top: 20px;
+    left: 10px;
+    right: 0;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle a {
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  #menuToggle a:hover {
+    color: tomato;
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+  }
+
+  /*
+   * Just a quick hamburger
+   */
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #9e8a68;
+    border-radius: 5px;
+    z-index: 1;
+    transform-origin: 4px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  /* 
+   * Transform all the slices of hamburger
+   * into a crossmark.
+   */
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #9e8a68;
+  }
+
+  /*
+   * But let's hide the middle one.
+   */
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  /*
+   * Ohyeah and the last one should go the other direction
+   */
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  /*
+   * Make this absolute positioned
+   * at the top left of the screen
+   */
+  #menu {
+    position: flex;
+    margin: -70px -50px;
+    padding: 40px 75px;
+    border-radius: 20px;
+
+    /* background: #ededed; */
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  #menu li {
+    padding: 40px;
+    font-size: 14px;
+    display: inline;
+    font-weight: bold;
+  }
+
+  /*
+   * And let's slide it in from the left
+   */
+  #menuToggle input:checked ~ ul {
+    transform: none;
+  }
+
+  .logo {
+    display: block;
+    position: relative;
+    top: 50px;
+    width: 20em;
+    border-radius: 50%;
+    margin-bottom: 50px;
+  }
+  .logo-container,
+  h1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .content-flex,
+  .content-section,
+  h3,
+  .img-wrapper,
+  .about-wrapper,
+  .icons,
+  .projects,
+  .logo {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+  }
+  .content-section {
+    padding: 5px 15px 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+  /* About section */
+
+  .about {
+    margin: 5px;
+    padding: 10px;
+    padding-left: 0;
+    padding-bottom: 10px;
+  }
+  .about-img,
+  .img-wrapper {
+    float: right;
+    border: 1px solid;
+    border-radius: 50%;
+    width: 20em;
+    background-image: linear-gradient(#695c45, #f5d6a2);
+  }
+  .icons img {
+    width: 10em;
+    margin-top: 10px;
+    padding: 10px;
+  }
+
+  .about-wrapper p {
+    background-color: #615540;
+    color: #efe9e6;
+    padding: 1em;
+    border-radius: 5px;
+  }
+
+  /* burger navbar */
+  #menuToggle {
+    display: block;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    right: 0;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle a {
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  #menuToggle a:hover {
+    color: tomato;
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+  }
+
+  /* MARKTECH SLIDESHOW */
+
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 50em;
+    position: relative;
+    margin: 10px;
+  }
+
+  /* The dots/bullets/indicators */
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active {
+    background-color: #717171;
+  }
+
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @-webkit-keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* CONTACT ME */
+  input,
+  select,
+  textarea,
+  form {
+    text-align: center;
+    background-color: #efe9e6;
+    border-radius: 5px;
+    width: 40em;
+    border: 1px solid;
+    padding: 0.5em;
+  }
+  .contact-me {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/********************this is for the Desktop 1024 above Pixels******************************************/
+
+@media screen and (min-width: 769px) {
+  /* burger navbar */
+  #menuToggle {
+    display: block;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    right: 0;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle a {
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  #menuToggle a:hover {
+    color: tomato;
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+  }
+
+  /*
+   * Just a quick hamburger
+   */
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #9e8a68;
+    border-radius: 5px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  /* 
+   * Transform all the slices of hamburger
+   * into a crossmark.
+   */
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #9e8a68;
+  }
+
+  /*
+   * But let's hide the middle one.
+   */
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  /*
+   * Ohyeah and the last one should go the other direction
+   */
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  /*
+   * Make this absolute positioned
+   * at the top left of the screen
+   */
+  #menu {
+    position: flex;
+    margin: -70px 0 0 -50px;
+    padding: 40px 0px 0px 75px;
+    border-radius: 20px;
+
+    /* background: #ededed; */
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  #menu li {
+    padding: 5px;
+    font-size: 14px;
+    display: inline;
+    font-weight: bold;
+  }
+
+  /*
+   * And let's slide it in from the left
+   */
+  #menuToggle input:checked ~ ul {
+    transform: none;
+  }
+
+  /* Branding */
+  .logo {
+    display: block;
+    position: relative;
+    top: 50px;
+    width: 25em;
+    border-radius: 50%;
+  }
+  .logo-container,
+  h1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* CONTENT SECTION */
+  .content-flex,
+  h3,
+  .about-wrapper,
+  .icons,
+  .projects,
+  .logo,
+  p,
+  .contact-me {
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: center;
+    text-align: center;
+  }
+  .content-section {
+    width: 45em;
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px;
+    align-items: center;
+  }
+  /* About section */
+
+  .about {
+    position: relative;
+    top: 5em;
+    width: 50em;
+    left: 15em;
+  }
+
+  .about-img {
+    position: relative;
+    right: 16em;
+    float: right;
+    border: 1px solid;
+    border-radius: 50%;
+    width: 25em;
+    background-image: linear-gradient(#695c45, #f5d6a2);
+  }
+  .icons img {
+    width: 5em;
+    margin-top: 10px;
+    padding: 10px;
+  }
+
+  .about-wrapper p {
+    background-color: #615540;
+    color: #efe9e6;
+    padding: 15px;
+    border-radius: 5px;
+    width: 40em;
+  }
+
+  /* DEVELOPER SKILLS */
+
+  .developer {
+    display: flex;
+    flex-flow: wrap column;
+    position: relative;
+    top: 1em;
+    text-align: center;
+    width: 100%;
+  }
+  .skills-wrapper {
+    width: 80em;
+    display: flex;
+    position: relative;
+    flex-flow: wrap row;
+    left: 20em;
+  }
+
+  /* MARKTECH SLIDESHOW */
+
+  /* Slideshow container */
+  .slideshow-container {
+    display: flex;
+    position: relative;
+    margin: 10px;
+    justify-content: center;
+    max-width: 60em;
+    position: relative;
+    margin: auto;
+  }
+
+  /* The dots/bullets/indicators */
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active {
+    background-color: #717171;
+  }
+
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @-webkit-keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* CONTACT ME */
+  input,
+  select,
+  textarea,
+  form {
+    text-align: center;
+    background-color: #efe9e6;
+    border-radius: 5px;
+    width: 40em;
+    border: 1px solid;
+    padding: 10px;
+  }
+  .contact-me {
+    margin-top: 50px;
+  }
+
+  .information {
+    position: relative;
+    left: -5em;
+  }
+  .form {
+    position: relative;
+    left: 15em;
+  }
+}
