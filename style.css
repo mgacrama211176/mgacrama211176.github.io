@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
 
 * {
   padding: 1px;
   border: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 
   background-color: #efe9e6;
   box-sizing: border-box;
@@ -43,7 +43,7 @@ h3 {
 /* Container for skill bars */
 .container {
   width: 100%; /* Full width */
-  background-color: #FFFFFF; /* Grey background */
+  background-color: #ffffff; /* Grey background */
 }
 
 .skills {
@@ -779,22 +779,25 @@ h3 {
 
   .about {
     position: relative;
-    top: 5em;
-    width: 50em;
-    left: 15em;
+    width: 100%;
+  }
+
+  .img-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .about-img {
-    position: relative;
-    right: 16em;
-    float: right;
+    margin: 0 auto;
     border: 1px solid;
     border-radius: 50%;
     width: 25em;
     background-image: linear-gradient(#695c45, #f5d6a2);
   }
+
   .icons img {
-    width: 5em;
+    width: 7em;
     margin-top: 10px;
     padding: 10px;
   }
@@ -802,81 +805,64 @@ h3 {
   .about-wrapper p {
     background-color: #615540;
     color: #efe9e6;
-    padding: 15px;
     border-radius: 5px;
     width: 40em;
   }
+  /* PROJECTS MADE */
 
-  /* DEVELOPER SKILLS */
-
-  .developer {
-    display: flex;
-    flex-flow: wrap column;
-    position: relative;
-    top: 1em;
-    text-align: center;
+  /* .project-section {
+    width: auto;
+    margin: 0 auto;
+  } */
+  .project-section .projectContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
   }
-  .skills-wrapper {
-    width: 80em;
-    display: flex;
-    position: relative;
-    flex-flow: wrap row;
-    left: 20em;
+
+  .project-section .projectContainer img {
+    width: 70%;
+    aspect-ratio: 1/1;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  .project-section .projectContainer img:hover {
+    background-color: black;
+    image-rendering: auto;
+    opacity: 0.5;
   }
 
-  /* MARKTECH SLIDESHOW */
-
-  /* Slideshow container */
-  .slideshow-container {
-    display: flex;
-    position: relative;
-    margin: 10px;
-    justify-content: center;
-    max-width: 60em;
-    position: relative;
-    margin: auto;
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: #008cba;
   }
 
-  /* The dots/bullets/indicators */
-  .dot {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+  .container:hover .overlay {
+    opacity: 1;
   }
 
-  .active {
-    background-color: #717171;
-  }
-
-  /* Fading animation */
-  .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-
-  @-webkit-keyframes fade {
-    from {
-      opacity: 0.4;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  @keyframes fade {
-    from {
-      opacity: 0.4;
-    }
-    to {
-      opacity: 1;
-    }
+  .text {
+    color: black;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border: 1px solid black;
   }
 
   /* CONTACT ME */
