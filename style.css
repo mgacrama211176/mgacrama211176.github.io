@@ -800,6 +800,12 @@ h3 {
     width: 7em;
     margin-top: 10px;
     padding: 10px;
+    transition: .5s;
+  }
+  .icons img:hover {
+opacity: .5;
+border: solid black 1px;
+border-radius: 50%;
   }
 
   .about-wrapper p {
@@ -810,13 +816,9 @@ h3 {
   }
   /* PROJECTS MADE */
 
-  /* .project-section {
-    width: auto;
-    margin: 0 auto;
-  } */
   .project-section .projectContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: .5fr .5fr .5fr;
     width: 100%;
   }
 
@@ -825,28 +827,17 @@ h3 {
     aspect-ratio: 1/1;
     padding: 10px;
     border-radius: 10px;
-    border: 1px solid black;
     margin: 0 auto;
     margin-top: 10px;
+    transition-duration: .5s;
   }
   .project-section .projectContainer img:hover {
-    background-color: black;
     image-rendering: auto;
     opacity: 0.5;
+    padding: 0px;
+
   }
 
-  .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: 0.5s ease;
-    background-color: #008cba;
-  }
 
   /* CONTACT ME */
   input,
