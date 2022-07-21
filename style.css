@@ -39,54 +39,6 @@ h3 {
   text-align: center;
 }
 
-/* SKILL BAR */
-/* Container for skill bars */
-.container {
-  width: 100%; /* Full width */
-  background-color: #ffffff; /* Grey background */
-}
-
-.skills {
-  text-align: right; /* Right-align text */
-  padding-top: 1px; /* Add top padding */
-  padding-bottom: 1px; /* Add bottom padding */
-  color: white; /* White text color */
-}
-
-.technical {
-  width: 90%;
-  background-color: #04aa6d;
-} /* Green */
-.html {
-  width: 80%;
-  background-color: #04aa6d;
-} /* Green */
-.css {
-  width: 50%;
-  background-color: #2196f3;
-} /* Blue */
-.js {
-  width: 10%;
-  background-color: #f44336;
-} /* Red */
-.php {
-  width: 40%;
-  background-color: #f44336;
-} /* Dark Grey */
-.c-plus-plus {
-  width: 20%;
-  background-color: #f44336;
-} /* Dark Grey */
-.skills-wrapper {
-  font-weight: bolder;
-}
-/* PROJECTS */
-.projects img {
-  width: 100%;
-  border: 1px solid;
-  border-radius: 10px;
-}
-
 /********************this is for the mobile app 1st with a width of 375p******************************************/
 
 @media screen and (max-width: 375px) {
@@ -800,12 +752,12 @@ h3 {
     width: 7em;
     margin-top: 10px;
     padding: 10px;
-    transition: .5s;
+    transition: 0.5s;
   }
   .icons img:hover {
-opacity: .5;
-border: solid black 1px;
-border-radius: 50%;
+    opacity: 0.5;
+    border: solid black 1px;
+    border-radius: 50%;
   }
 
   .about-wrapper p {
@@ -818,7 +770,7 @@ border-radius: 50%;
 
   .project-section .projectContainer {
     display: grid;
-    grid-template-columns: .5fr .5fr .5fr;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
     width: 100%;
   }
 
@@ -829,15 +781,13 @@ border-radius: 50%;
     border-radius: 10px;
     margin: 0 auto;
     margin-top: 10px;
-    transition-duration: .5s;
+    transition-duration: 0.5s;
   }
   .project-section .projectContainer img:hover {
     image-rendering: auto;
     opacity: 0.5;
     padding: 0px;
-
   }
-
 
   /* CONTACT ME */
   input,
