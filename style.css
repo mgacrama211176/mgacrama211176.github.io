@@ -1,12 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
 
 * {
-  padding: 1px;
+  padding: 0px;
   border: 0;
-  font-family: 'Poppins', sans-serif;
-
-  background-color: #efe9e6;
+  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
+  scroll-behavior: smooth 1s;
+}
+
+body {
+  margin: 0 5em;
 }
 
 label,
@@ -25,18 +28,11 @@ button {
 
 /* content */
 .color,
-h1,
 .content-section,
 #menuToggle a,
-h3,
 .skills-wrapper,
 p {
   color: #8f7d5e;
-}
-
-h3 {
-  padding-top: 80px;
-  text-align: center;
 }
 
 /* SKILL BAR */
@@ -96,18 +92,137 @@ button {
   align-items: center;
 }
 
+.header-section {
+  margin: 5em 1em 1em 1em;
+  display: flex;
+  justify-content: center;
+  animation: slide-in 2s;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    margin: -3em 1em 1em 1em;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.header_section_container {
+  align-items: center;
+  background-color: #ff9900;
+  border-radius: 15px;
+  display: flex;
+  max-width: 100%;
+  flex-direction: row;
+  gap: 10px;
+  height: 80vh;
+  padding: 20px;
+  position: relative;
+}
+
+.logo-container {
+  width: 35%;
+  /* min-width: 20rem;
+  max-width: 80rem; */
+}
+.logo {
+  width: 100%;
+}
+
+#marlonG {
+  position: relative;
+  animation: fill 0.5s ease forwards 5.5s;
+  width: 80%;
+}
+
+#marlonG path:nth-child(9) {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: line-anim 2s ease forwards;
+}
+
+#marlonG path:nth-child(10) {
+  stroke-dasharray: 301;
+  stroke-dashoffset: 301;
+  animation: line-anim 2s ease forwards 1s;
+}
+#marlonG path:nth-child(11) {
+  stroke-dasharray: 301;
+  stroke-dashoffset: 301;
+  animation: line-anim 2s ease forwards 1.5s;
+}
+#marlonG path:nth-child(12) {
+  stroke-dasharray: 344;
+  stroke-dashoffset: 344;
+  animation: line-anim 2s ease forwards 2s;
+}
+#marlonG path:nth-child(13) {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: line-anim 2s ease forwards 2.5s;
+}
+#marlonG path:nth-child(14) {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: line-anim 2s ease forwards 3s;
+}
+#marlonG path:nth-child(15) {
+  stroke-dasharray: 741;
+  stroke-dashoffset: 741;
+  animation: line-anim 2s ease forwards 3.5s;
+}
+
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 0;
+  }
+}
+
+@keyframes fill {
+  from {
+    fill: #ff9900;
+  }
+  to {
+    fill: white;
+  }
+}
+
+.brand_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.brand_name {
+  display: flex;
+  justify-content: center;
+}
+
+.brand_about {
+  color: white;
+  font-size: 1em;
+}
+
+.brand_contact {
+  border: none;
+  font-size: 14px;
+}
+
+.brand_contact:hover {
+  border: black solid 1px;
+  font-weight: bold;
+}
+
 /********************this is for the mobile app 1st with a width of 375p******************************************/
 
 @media screen and (max-width: 375px) {
   /* Branding */
-  .logo {
-    display: block;
-    position: relative;
-    top: 50px;
-    width: 15em;
-    border-radius: 50%;
-  }
-  .logo-container,
   h1 {
     display: flex;
     justify-content: center;
@@ -117,12 +232,10 @@ button {
 
   .content-flex,
   .content-section,
-  h3,
   .img-wrapper,
   .about-wrapper,
   .icons,
-  .projects,
-  .logo {
+  .projects {
     display: flex;
     flex-flow: wrap row;
     justify-content: center;
@@ -501,12 +614,6 @@ button {
   }
 
   /* Branding */
-  .logo {
-    top: 50px;
-    width: 25em;
-    border-radius: 50%;
-  }
-  .logo-container,
   h1 {
     display: flex;
     justify-content: center;
@@ -697,15 +804,6 @@ button {
     transform: none;
   }
 
-  .logo {
-    display: block;
-    position: relative;
-    top: 50px;
-    width: 20em;
-    border-radius: 50%;
-    margin-bottom: 50px;
-  }
-  .logo-container,
   h1 {
     display: flex;
     justify-content: center;
@@ -713,12 +811,10 @@ button {
 
   .content-flex,
   .content-section,
-  h3,
   .img-wrapper,
   .about-wrapper,
   .icons,
-  .projects,
-  .logo {
+  .projects {
     display: flex;
     flex-flow: wrap row;
     justify-content: center;
@@ -953,14 +1049,6 @@ button {
   }
 
   /* Branding */
-  .logo {
-    display: block;
-    position: relative;
-    top: 50px;
-    width: 25em;
-    border-radius: 50%;
-  }
-  .logo-container,
   h1 {
     display: flex;
     justify-content: center;
@@ -968,11 +1056,9 @@ button {
 
   /* CONTENT SECTION */
   .content-flex,
-  h3,
   .about-wrapper,
   .icons,
   .projects,
-  .logo,
   p,
   .contact-me {
     display: flex;
